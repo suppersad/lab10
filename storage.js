@@ -1,17 +1,34 @@
 // Вставьте адрес вашего контракта
-const contractAddress = 'CONTRACT_ADDRESS_HERE';
+const contractAddress = '0xEdC845c66257dcC6117e21ec174f83BF72e65321';
 
 // Вставьте ABI вашего контракта (скопируйте из Remix)
 const contractAbi = [
-  {
-    "inputs": [{"internalType":"string","name":"_message","type":"string"}],
-    "name":"setMessage","outputs":[],"stateMutability":"nonpayable","type":"function"
-  },
-  {
-    "inputs": [], "name": "getMessage",
-    "outputs":[{"internalType":"string","name":"","type":"string"}],
-    "stateMutability":"view","type":"function"
-  }
+	{
+		"inputs": [],
+		"name": "getMessage",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_message",
+				"type": "string"
+			}
+		],
+		"name": "setMessage",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
 ];
 
 const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -40,3 +57,4 @@ document.getElementById('getMessageButton').onclick = async () => {
     alert('Ошибка чтения: ' + (err.message || err));
   }
 };
+
