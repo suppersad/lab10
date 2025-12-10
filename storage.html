@@ -2,24 +2,33 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <title>SimpleStorage — Ethers.js</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.2.0/ethers.umd.js"></script>
+  <title>SimpleStorage Interaction</title>
+
+  <!-- ethers.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.2.0/ethers.umd.min.js"></script>
+
   <style>
-    body { font-family: Arial; padding: 20px; }
-    input, button { padding: 6px; margin: 6px 0; }
-    code { background:#f1f1f1; padding:2px 4px; border-radius:4px; }
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input, button { padding: 8px; margin: 6px 0; }
+    button { cursor: pointer; }
+    #messageDisplay { font-weight: bold; margin-top: 10px; }
   </style>
 </head>
+
 <body>
-  <h1>SimpleStorage</h1>
 
-  <p>Контракт: <code id="contractAddress">(укажите адрес)</code></p>
+  <h1>SimpleStorage — взаимодействие с контрактом</h1>
 
-  <input id="messageInput" placeholder="Введите сообщение" />
-  <button id="setMessageButton">Установить сообщение</button>
-  <button id="getMessageButton">Получить сообщение</button>
+  <button id="connectButton">Подключить MetaMask</button>
 
-  <p>Сообщение: <span id="messageDisplay"></span></p>
+  <h3>Прочитать сообщение:</h3>
+  <button id="getMessageButton">Get Message</button>
+
+  <p>Текущее сообщение: <span id="messageDisplay">(пусто)</span></p>
+
+  <h3>Установить сообщение:</h3>
+  <input id="messageInput" placeholder="Введите новое сообщение" size="40">
+  <button id="setMessageButton">Set Message</button>
 
   <script src="storage.js"></script>
 </body>
