@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>SimpleStorage — Ethers.js</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.2.0/ethers.umd.js"></script>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input, button { padding: 6px; margin: 6px 0; }
+    code { background:#f1f1f1; padding:2px 4px; border-radius:4px; }
+  </style>
+</head>
+<body>
+  <h1>SimpleStorage</h1>
+
+  <p>Контракт: <code id="contractAddress">(укажите адрес)</code></p>
+
+  <input id="messageInput" placeholder="Введите сообщение" />
+  <button id="setMessageButton">Установить сообщение</button>
+  <button id="getMessageButton">Получить сообщение</button>
+
+  <p>Сообщение: <span id="messageDisplay"></span></p>
+
+  <script src="storage.js"></script>
+</body>
+</html>
