@@ -9,11 +9,16 @@
     body { font-family: Arial, sans-serif; padding: 20px; }
     button { padding: 8px 12px; margin: 8px 0; }
     .info { margin-top: 12px; }
+    .small-text {
+    font-size: 12px;
+    line-height: 1.4;
+    white-space: pre-wrap;}
   </style>
 </head>
 <body>
-  <h1>1. 
-Текст вопроса: Какое ключевое слово указывается в команде CREATE INDEX, чтобы 
+  <div class="small-text">
+  <pre>
+    1. Текст вопроса: Какое ключевое слово указывается в команде CREATE INDEX, чтобы 
 создать индекс без блокировки записи в таблицу? 
 Строка для ввода ответа: 
 Ответ: CONCURRENTLY 
@@ -1413,7 +1418,9 @@ SQL?
 Текст вопроса: Какой режим работы PostgreSQL обеспечивает высокую доступность 
 за счёт репликации? 
 Строка для ввода ответа: 
-Ответ: hot standby </h1>
+Ответ: hot standby 
+</div class="small-text">
+</pre>
   <button id="connectButton">Подключить кошелек</button>
   <div id="accountInfo" class="info"></div>
 
